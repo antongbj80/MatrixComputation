@@ -1,5 +1,5 @@
 #MyLinearSolver
-#author:AnTong
+#author:Tong
 
 #下三角矩阵求解器
 function forward_sub(A,b)
