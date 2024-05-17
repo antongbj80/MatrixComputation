@@ -30,7 +30,6 @@ function CG(A, b, x0, eps, max_iter)
 end
 
 
-
 A = [4. -1 -1 -1;
      -1 4. -1 -1;
      -1 -1 4. -1;
