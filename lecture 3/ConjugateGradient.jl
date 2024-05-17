@@ -10,7 +10,6 @@ function CG(A, b, x0, eps, max_iter)
         println("The initial residuals have reached the convergence condition")
         return x, iter  # 如果满足，返回初始解和迭代次数 0
     end
-
     for num in 1:max_iter
         iter = num
         Ad = A*d
@@ -18,7 +17,7 @@ function CG(A, b, x0, eps, max_iter)
         x = x + alpha*d
         r = r - alpha*Ad
         rdot = dot(r,r)
-        println("residuals = ", sqrt(rdot))
+        println("$num of residuals = ", sqrt(rdot))
         if sqrt(rdot) < eps
             println("Residuals reaching the convergence condition")
             break
@@ -27,7 +26,6 @@ function CG(A, b, x0, eps, max_iter)
         d = r + beta * d
         r0 = rdot
     end
-
     return x , iter
 end
 
