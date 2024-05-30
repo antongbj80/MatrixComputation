@@ -28,16 +28,15 @@ A = [2. 3. 4. 5. 6.;
      0. 0. 2. 8. 9.;
      0. 0. 0. 1. 10.]
 
+# 运行 Power Method
+lambda_power, q_power = power_method(A)
+
 # 使用 Julia 自带的 eigen 函数计算最大模特征值和特征向量
 eigen(A).values
 eigenvalues, eigenvectors = eigen(A)
 max_eigval_index = argmax(abs.(eigenvalues))
 max_eigval = eigenvalues[max_eigval_index]
 max_eigvec = eigenvectors[:, max_eigval_index]
-
-# 运行 Power Method
-lambda_power, q_power = power_method(A)
-
 # 输出结果
 println("最大模特征值 (Power Method): ", lambda_power)
 println("最大模特征向量 (Power Method): ", q_power)
